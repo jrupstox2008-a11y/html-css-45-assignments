@@ -1,0 +1,8 @@
+
+# Assignment 25: Design Choices
+
+- **Colours:** Dark blue for the header and headings, with a light background.
+- **Typography:** Arial for readable text.
+- **Layout:** A centered content area for a clean appearance.
+- **Consistency:** The same stylesheet is shared across all four pages.
+- **Buttons and links:** Blue buttons and hover underlines help users identify interactive elements.

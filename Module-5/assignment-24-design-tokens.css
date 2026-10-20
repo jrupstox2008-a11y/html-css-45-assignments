@@ -1,0 +1,50 @@
+
+/* Assignment 24: CSS Design Tokens */
+
+:root {
+    /* Colour tokens */
+    --primary-color: #17365d;
+    --secondary-color: #2563eb;
+    --background-color: #f1f5f9;
+    --text-color: #334155;
+    --card-color: #ffffff;
+
+    /* Font-size tokens */
+    --font-small: 14px;
+    --font-normal: 16px;
+    --font-large: 24px;
+    --font-heading: 32px;
+
+    /* Spacing tokens */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+}
+
+/* Use the tokens */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--font-normal);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: var(--font-heading);
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: var(--font-large);
+}
+
+.card {
+    background-color: var(--card-color);
+    padding: var(--spacing-large);
+}
+
+small {
+    font-size: var(--font-small);
+}
+
