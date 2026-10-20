@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 29 - Hero Section</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 400px;
+            padding: 60px 30px;
+            background-color: #17365d;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #fbbf24;
+            color: #17365d;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .hero-shape {
+            position: absolute;
+            z-index: 1;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background-color: #2563eb;
+            right: 40px;
+            top: 60px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-shape {
+                right: -150px;
+                top: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-shape"></div>
+
+        <div class="hero-content">
+            <h1>Build Your Future</h1>
+            <p>
+                Learn new skills, explore your creativity,
+                and build amazing projects with HTML and CSS.
+            </p>
+            <a href="#learn" class="hero-button">Start Learning</a>
+        </div>
+    </section>
+
+    <main id="learn" style="padding: 30px;">
+        <h2>Welcome to My Learning Journey</h2>
+        <p>This section appears below the hero.</p>
+    </main>
+
+</body>
+</html>
