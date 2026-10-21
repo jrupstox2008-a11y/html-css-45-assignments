@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 70px 1fr 55px;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            background: #0f172a;
+            color: white;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            padding: 25px;
+            background: #1e293b;
+            color: white;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 18px 0;
+            color: #e2e8f0;
+            text-decoration: none;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 30px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 18px;
+        }
+
+        .stat-card {
+            padding: 22px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 3px 10px #00000010;
+        }
+
+        .stat-card h3 {
+            margin-top: 0;
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        .stat-card p {
+            margin-bottom: 0;
+            color: #2563eb;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .footer {
+            grid-area: footer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e2e8f0;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr auto;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+
+            .sidebar {
+                padding: 10px 20px;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 10px;
+            }
+
+            .main {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <header class="header">
+            <h2>My Dashboard</h2>
+        </header>
+
+        <nav class="sidebar">
+            <h3>Navigation</h3>
+            <a href="#overview">Overview</a>
+            <a href="#analytics">Analytics</a>
+            <a href="#reports">Reports</a>
+            <a href="#settings">Settings</a>
+        </nav>
+
+        <main class="main" id="overview">
+            <h1>Dashboard Overview</h1>
+            <p>Welcome! Here is a summary of your activity.</p>
+
+            <section class="stats" id="analytics">
+                <article class="stat-card">
+                    <h3>Total Users</h3>
+                    <p>1,250</p>
+                </article>
+
+                <article class="stat-card">
+                    <h3>Revenue</h3>
+                    <p>₹25K</p>
+                </article>
+
+                <article class="stat-card">
+                    <h3>Orders</h3>
+                    <p>320</p>
+                </article>
+            </section>
+
+            <section id="reports">
+                <h2>Reports</h2>
+                <p>Your latest dashboard summary appears here.</p>
+            </section>
+
+            <section id="settings">
+                <h2>Settings</h2>
+                <p>Dashboard settings can be managed here.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 My Dashboard</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
