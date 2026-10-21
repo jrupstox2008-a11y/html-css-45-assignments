@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #172033;
+            background: #f8fafc;
+        }
+
+        /* Flexbox navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 20px 8%;
+            background: #0f172a;
+            color: white;
+        }
+
+        .logo {
+            margin: 0;
+            color: #60a5fa;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Flexbox hero */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 35px;
+            padding: 75px 8%;
+            background: #dbeafe;
+        }
+
+        .hero-content {
+            flex: 1 1 300px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(34px, 5vw, 54px);
+            margin-top: 0;
+        }
+
+        .hero-content p {
+            max-width: 500px;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 22px;
+            border-radius: 7px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero-visual {
+            display: flex;
+            flex: 1 1 250px;
+            align-items: center;
+            justify-content: center;
+            min-height: 240px;
+            border-radius: 18px;
+            background: white;
+            font-size: 85px;
+        }
+
+        /* CSS Grid project cards */
+        .projects {
+            padding: 55px 8%;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            padding: 25px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 14px #00000012;
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+        }
+
+        .project-card p {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #0f172a;
+            color: white;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 750px) {
+            .hero {
+                padding: 50px 6%;
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                padding: 35px 6%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <h2 class="logo">NovaWeb</h2>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Turn Your Ideas Into Reality</h1>
+                <p>
+                    Explore creative digital experiences built with clean
+                    design, responsive layouts, and modern web technologies.
+                </p>
+                <a class="hero-button" href="#projects">Explore Projects</a>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">🚀</div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2>Featured Projects</h2>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Portfolio</h3>
+                    <p>A personal website showcasing skills and projects.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Online Store</h3>
+                    <p>A responsive product layout for an online shop.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Dashboard</h3>
+                    <p>A clean dashboard arranged with CSS Grid.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 NovaWeb. Built with HTML and CSS.</p>
+    </footer>
+
+</body>
+</html>
