@@ -204,6 +204,51 @@
     }
 }
 
+/* General responsive fixes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-wrap: anywhere;
+}
+
+.site-header,
+.hero,
+.projects,
+.about {
+    min-width: 0;
+}
+
+.hero > *,
+.project-card {
+    min-width: 0;
+}
+
+.nav-links {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 18px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+}
+
     </style>
 </head>
 <body>
