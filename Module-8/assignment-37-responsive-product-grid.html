@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e293b;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .product-card {
+            padding: 22px;
+            text-align: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        .product-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 140px;
+            border-radius: 8px;
+            background: #dbeafe;
+            font-size: 55px;
+        }
+
+        .product-card h2 {
+            color: #1d4ed8;
+            font-size: 21px;
+        }
+
+        .price {
+            color: #15803d;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Shop Our Products</h1>
+
+    <main class="product-grid">
+        <article class="product-card">
+            <div class="product-image" aria-hidden="true">🎧</div>
+            <h2>Headphones</h2>
+            <p>Enjoy your favourite music.</p>
+            <p class="price">₹1,499</p>
+            <button type="button">View Product</button>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image" aria-hidden="true">⌚</div>
+            <h2>Smart Watch</h2>
+            <p>Stay connected every day.</p>
+            <p class="price">₹2,499</p>
+            <button type="button">View Product</button>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image" aria-hidden="true">🎒</div>
+            <h2>Backpack</h2>
+            <p>Carry your essentials with ease.</p>
+            <p class="price">₹999</p>
+            <button type="button">View Product</button>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image" aria-hidden="true">👟</div>
+            <h2>Sports Shoes</h2>
+            <p>Comfort for everyday adventures.</p>
+            <p class="price">₹1,999</p>
+            <button type="button">View Product</button>
+        </article>
+    </main>
+
+</body>
+</html>
