@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Portfolio Project</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #e2e8f0;
+            background: #0f172a;
+        }
+
+        .site-header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 20px;
+            padding: 22px 8%;
+            background: #111c32;
+        }
+
+        .logo {
+            margin: 0;
+            color: #60a5fa;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            gap: 40px;
+            padding: 80px 8%;
+        }
+
+        .hero h1 {
+            margin-top: 0;
+            font-size: clamp(34px, 5vw, 58px);
+        }
+
+        .hero p {
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .hero-visual {
+            display: grid;
+            place-items: center;
+            min-height: 260px;
+            border-radius: 20px;
+            background: #1e3a5f;
+            font-size: 100px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 22px;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+        }
+
+        .projects {
+            padding: 55px 8%;
+            background: #172338;
+        }
+
+        .projects h2,
+        .about h2 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            padding: 25px;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            background: #1e293b;
+        }
+
+        .project-card h3 {
+            color: #60a5fa;
+        }
+
+        .project-card p {
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        .about {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 650px;
+            margin: 20px auto;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #111c32;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 750px) {
+            .site-header {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 50px 6%;
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects,
+            .about {
+                padding: 40px 6%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <h2 class="logo">MyPortfolio</h2>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div>
+                <h1>Creative Ideas. Clean Design.</h1>
+                <p>
+                    Hello! I'm a beginner web developer learning to build
+                    modern, responsive websites using HTML and CSS Grid.
+                </p>
+                <a class="button" href="#projects">Explore My Projects</a>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">💻</div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2>My Projects</h2>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal website built with semantic HTML and CSS.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Product Grid</h3>
+                    <p>A responsive product layout using CSS Grid.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Dashboard</h3>
+                    <p>A dashboard arranged using named grid areas.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm developing my web design skills one project at a time.
+                My goal is to create accessible, responsive, and user-friendly
+                websites.
+            </p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 MyPortfolio | Built with HTML and CSS Grid</p>
+    </footer>
+
+</body>
+</html>
