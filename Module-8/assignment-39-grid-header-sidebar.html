@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Shop</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+
+        .page {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas:
+                "header header"
+                "sidebar products";
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 5%;
+            background: #0f172a;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            padding: 25px 20px;
+            background: #e2e8f0;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+        }
+
+        .sidebar label {
+            display: block;
+            margin: 15px 0;
+        }
+
+        .products {
+            grid-area: products;
+            padding: 30px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            padding: 18px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 3px 12px #00000012;
+            text-align: center;
+        }
+
+        .product-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 130px;
+            border-radius: 8px;
+            background: #dbeafe;
+            font-size: 48px;
+        }
+
+        .product-card h3 {
+            color: #1d4ed8;
+        }
+
+        .price {
+            color: #15803d;
+            font-weight: bold;
+        }
+
+        @media (max-width: 650px) {
+            .page {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "products";
+            }
+
+            .sidebar {
+                padding: 15px 20px;
+            }
+
+            .sidebar label {
+                display: inline-block;
+                margin: 8px 12px 8px 0;
+            }
+
+            .products {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+
+        <header class="header">
+            <h1>GridShop</h1>
+            <a href="#products">Browse Products</a>
+        </header>
+
+        <aside class="sidebar">
+            <h2>Filters</h2>
+
+            <h3>Category</h3>
+            <label><input type="checkbox"> Electronics</label>
+            <label><input type="checkbox"> Clothing</label>
+            <label><input type="checkbox"> Accessories</label>
+
+            <h3>Price</h3>
+            <label><input type="checkbox"> Under ₹1,000</label>
+            <label><input type="checkbox"> ₹1,000 and above</label>
+        </aside>
+
+        <main class="products" id="products">
+            <h2>Our Products</h2>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">🎧</div>
+                    <h3>Headphones</h3>
+                    <p>Wireless audio</p>
+                    <p class="price">₹1,499</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">⌚</div>
+                    <h3>Smart Watch</h3>
+                    <p>Everyday companion</p>
+                    <p class="price">₹2,499</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">🎒</div>
+                    <h3>Backpack</h3>
+                    <p>Carry essentials</p>
+                    <p class="price">₹999</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">👟</div>
+                    <h3>Sports Shoes</h3>
+                    <p>Everyday comfort</p>
+                    <p class="price">₹1,999</p>
+                </article>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
