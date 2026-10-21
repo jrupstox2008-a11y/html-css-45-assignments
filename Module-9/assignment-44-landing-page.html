@@ -137,6 +137,105 @@
             background: #0f172a;
             color: white;
         }
+        
+/* Smooth responsive transitions */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.button:hover {
+    background: #1d4ed8;
+}
+
+.feature-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000018;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        gap: 30px;
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-visual {
+        min-height: 250px;
+        font-size: 75px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-visual {
+        min-height: 200px;
+        font-size: 65px;
+    }
+
+    .features {
+        padding: 35px 0;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 22px;
+    }
+}
+
     </style>
 </head>
 <body>
